@@ -25,7 +25,10 @@ public class Server {
         if (guest.getCurrency() != '£'){
             return false;
         }
-        return true;
+        if (this.drinkNames.contains(guest.getFavouriteDrink())) {
+            return true;
+        }
+        return false;
     }
 
     public ArrayList<String> getDrinkNames(){

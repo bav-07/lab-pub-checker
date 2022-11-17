@@ -105,6 +105,18 @@ public class ServerTest {
 
     // TODO: test that guest can only get served if server can make favourite drink
     //  (give server a list of drinks (strings) it can make)
+    @Test
+    public void servesIfFavouriteDrinkAvailable(){
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(true);
+    }
+
+    @Test
+    public void doesNotServeIfFavouriteDrinkNotAvailable(){
+        guest.setFavouriteDrink("Red Bull");
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(false);
+    }
 
     // GETTER & SETTER TESTS
     @Test
