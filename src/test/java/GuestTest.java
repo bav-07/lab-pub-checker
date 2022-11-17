@@ -13,7 +13,8 @@ public class GuestTest {
                 "John",
                 24,
                 50,
-                100);
+                100,
+                true);
     }
 
     @Test

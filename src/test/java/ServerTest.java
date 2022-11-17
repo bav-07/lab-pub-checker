@@ -18,7 +18,8 @@ public class ServerTest {
                 "John",
                 24,
                 50,
-                100);
+                100,
+                true);
     }
 
     // TODO: test that guest can only get served if over 18
@@ -64,6 +65,19 @@ public class ServerTest {
     }
 
     // TODO: test that guest can only get served if guest is not banned from the pub
+    @Test
+    public void canServeIfNotBanned(){
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(true);
+    }
+
+    @Test
+    public void doesNotGetServedIfBanned(){
+        guest.setNotBanned(false);
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(false);
+    }
+
 
     // TODO: test that guest can only get served if guest can pay in local currency (add £ char as currency)
 
