@@ -126,18 +126,10 @@ public class ServerTest {
         assertThat(guest.getWallet()).isEqualTo(3);
     }
 
-    // GETTER & SETTER TESTS
+    // GETTER & SETTER TEST
+    // Removed Getter test, because setter test already incorporates testing of getDrinkNames()
     @Test
-    public void hasDrinkNames(){
-        assertThat(server.getDrinkNames().get(0)).isEqualTo("Pepsi");
-        assertThat(server.getDrinkNames().get(1)).isEqualTo("Fanta");
-        assertThat(server.getDrinkNames().get(2)).isEqualTo("Coke");
-        assertThat(server.getDrinkNames().get(3)).isEqualTo("Sprite");
-        assertThat(server.getDrinkNames().get(4)).isEqualTo("Dr.Pepper");
-    }
-
-    @Test
-    public void canSetDrinkNames(){
+    public void canGetAndSetDrinkNames(){
         ArrayList<String> newDrinkNames = new ArrayList<>();
         newDrinkNames.add("7Up");
         newDrinkNames.add("Lucozade");
