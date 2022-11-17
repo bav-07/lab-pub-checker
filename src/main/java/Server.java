@@ -16,6 +16,9 @@ public class Server {
         if (guest.getWallet() < 5){
             return false;
         }
+        if (guest.getSobriety() < 50){
+            return false;
+        }
         return true;
     }
 
