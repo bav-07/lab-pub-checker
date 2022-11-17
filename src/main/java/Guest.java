@@ -33,6 +33,12 @@ public class Guest {
         this.wallet = wallet;
     }
 
+    public double getSobriety(){
+        return this.sobriety;
+    }
+    public void setSobriety(int sobriety){
+        this.sobriety = sobriety;
+    }
 
 
 }

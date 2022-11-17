@@ -50,12 +50,12 @@ public class GuestTest {
     }
 
     @Test
-    public void isSober(){
+    public void hasSobriety(){
         assertThat(guest.getSobriety()).isEqualTo(100);
     }
 
     @Test
-    public void isDrunk(){
+    public void canSetSobriety(){
         guest.setSobriety(49);
         assertThat(guest.getSobriety()).isEqualTo(49);
     }
