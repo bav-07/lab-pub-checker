@@ -60,4 +60,15 @@ public class GuestTest {
         guest.setSobriety(49);
         assertThat(guest.getSobriety()).isEqualTo(49);
     }
+
+    @Test
+    public void hasPermissionToEnter(){
+        assertThat(guest.getPermissionToEnter()).isEqualTo(true);
+    }
+
+    @Test
+    public void canSetPermissionToEnter(){
+        guest.setPermissionToEnter(false);
+        assertThat(guest.getPermissionToEnter()).isEqualTo(false);
+    }
 }

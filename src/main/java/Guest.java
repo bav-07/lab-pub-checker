@@ -4,7 +4,7 @@ public class Guest {
     private int age;
     private double wallet;
     private int sobriety;
-    private boolean notBanned
+    private boolean notBanned;
 
     public Guest(String name, int age, double wallet, int sobriety, boolean notBanned){
         this.name = name;
