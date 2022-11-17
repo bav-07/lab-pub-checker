@@ -34,71 +34,61 @@ public class ServerTest {
     // TODO: test that guest can only get served if over 18
     @Test
     public void canServeToOver18s(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotServeToUnder18s(){
         guest.setAge(12);
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     // TODO: test that guest can only get served if has enough money to buy a drink (every drink is £5)
     @Test
     public void serveIfGuestHasEnoughMoney(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotServeIfGuestDoesNotHaveEnoughMoney(){
         guest.setWallet(4.99);
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     // TODO: test that guest can only get served if sober enough (set sobriety level on guest)
     @Test
     public void canServeIfSoberEnough(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotServeIfDrunk(){
         guest.setSobriety(49);
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     // TODO: test that guest can only get served if guest is not banned from the pub
     @Test
     public void canServeIfNotBanned(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotGetServedIfBanned(){
         guest.setPermissionToEnter(false);
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     // TODO: test that guest can only get served if guest can pay in local currency (add £ char as currency)
     @Test
     public void canServeIfCurrencyLocal(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotGetServedIfCurrencyForeign(){
         guest.setCurrency('$');
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     // EXTENSIONS
@@ -107,15 +97,13 @@ public class ServerTest {
     //  (give server a list of drinks (strings) it can make)
     @Test
     public void servesIfFavouriteDrinkAvailable(){
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(true);
+        assertThat(server.canServeGuest(guest)).isEqualTo(true);
     }
 
     @Test
     public void doesNotServeIfFavouriteDrinkNotAvailable(){
         guest.setFavouriteDrink("Red Bull");
-        boolean result = server.canServeGuest(guest);
-        assertThat(result).isEqualTo(false);
+        assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
 
     @Test
