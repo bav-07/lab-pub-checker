@@ -51,5 +51,10 @@ public class Guest {
         this.notBanned = notBanned;
     }
 
-
+    public char getCurrency(){
+        return this.currency;
+    }
+    public void setCurrency(char currency){
+        this.currency = currency;
+    }
 }
