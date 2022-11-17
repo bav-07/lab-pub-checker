@@ -28,4 +28,12 @@ public class Server {
         return true;
     }
 
+    public ArrayList<String> getDrinkNames(){
+        return this.drinkNames;
+    }
+
+    public void setDrinkNames(ArrayList<String> drinkNames){
+        this.drinkNames = drinkNames;
+    }
+
 }

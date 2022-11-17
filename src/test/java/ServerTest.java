@@ -109,11 +109,11 @@ public class ServerTest {
     // GETTER & SETTER TESTS
     @Test
     public void hasDrinkNames(){
-        assertThat(server.getDrinkNames.get(0)).isEqualTo("Pepsi");
-        assertThat(server.getDrinkNames.get(1)).isEqualTo("Fanta");
-        assertThat(server.getDrinkNames.get(2)).isEqualTo("Coke");
-        assertThat(server.getDrinkNames.get(3)).isEqualTo("Sprite");
-        assertThat(server.getDrinkNames.get(4)).isEqualTo("Dr.Pepper");
+        assertThat(server.getDrinkNames().get(0)).isEqualTo("Pepsi");
+        assertThat(server.getDrinkNames().get(1)).isEqualTo("Fanta");
+        assertThat(server.getDrinkNames().get(2)).isEqualTo("Coke");
+        assertThat(server.getDrinkNames().get(3)).isEqualTo("Sprite");
+        assertThat(server.getDrinkNames().get(4)).isEqualTo("Dr.Pepper");
     }
 
     @Test
@@ -123,9 +123,9 @@ public class ServerTest {
         newDrinkNames.add("Lucozade");
         newDrinkNames.add("Red Bull");
         server.setDrinkNames(newDrinkNames);
-        assertThat(server.getDrinkNames.get(0)).isEqualTo("7Up");
-        assertThat(server.getDrinkNames.get(1)).isEqualTo("Lucozade");
-        assertThat(server.getDrinkNames.get(2)).isEqualTo("Red Bull");
+        assertThat(server.getDrinkNames().get(0)).isEqualTo("7Up");
+        assertThat(server.getDrinkNames().get(1)).isEqualTo("Lucozade");
+        assertThat(server.getDrinkNames().get(2)).isEqualTo("Red Bull");
     }
 
 }
