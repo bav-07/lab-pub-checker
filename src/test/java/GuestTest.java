@@ -12,7 +12,8 @@ public class GuestTest {
         guest = new Guest(
                 "John",
                 24,
-                50);
+                50,
+                100);
     }
 
     @Test

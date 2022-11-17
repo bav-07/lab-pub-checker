@@ -3,12 +3,13 @@ public class Guest {
     private String name;
     private int age;
     private double wallet;
+    private int sobriety;
 
-    public Guest(String name, int age, double wallet){
+    public Guest(String name, int age, double wallet, int sobriety){
         this.name = name;
         this.age = age;
         this.wallet = wallet;
-
+        this.sobriety = sobriety
     }
 
     public String getName(){
