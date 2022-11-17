@@ -24,4 +24,15 @@ public class GuestTest {
         guest.setName("Dave");
         assertThat(guest.getName()).isEqualTo("Dave");
     }
+
+    @Test
+    public void hasAge(){
+        assertThat(guest.getAge()).isEqualTo(24);
+    }
+
+    @Test
+    public void canSetAge(){
+        guest.setAge(35);
+        assertThat(guest.getAge()).isEqualTo(35);
+    }
 }
