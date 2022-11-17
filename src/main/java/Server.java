@@ -19,6 +19,9 @@ public class Server {
         if (guest.getSobriety() < 50){
             return false;
         }
+        if (guest.getPermissionToEnter() == false){
+            return false;
+        }
         return true;
     }
 
