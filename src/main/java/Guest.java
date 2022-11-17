@@ -59,4 +59,11 @@ public class Guest {
     public void setCurrency(char currency){
         this.currency = currency;
     }
+
+    public String getFavouriteDrink(){
+        return this.favouriteDrink;
+    }
+    public void setFavouriteDrink(String favouriteDrink){
+        this.favouriteDrink = favouriteDrink;
+    }
 }
