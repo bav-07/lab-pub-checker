@@ -10,10 +10,15 @@ public class Server {
     }
 
     public boolean canServeGuest(Guest guest){
-        if (guest.getAge() < 19 || guest.getWallet() < 5 || guest.getSobriety() < 50 || guest.getPermissionToEnter() == false || guest.getCurrency() != '£'){
+        if (guest.getAge() < 19 ||
+            guest.getWallet() < 5 ||
+            guest.getSobriety() < 50 ||
+            !guest.getPermissionToEnter() ||
+            guest.getCurrency() != '£' ||
+            !guest.guestCanBuy()){
             return false;
         }
-        
+
         if (this.drinkNames.contains(guest.getFavouriteDrink())) {
             return true;
         }

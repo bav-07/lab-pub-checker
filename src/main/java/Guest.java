@@ -1,5 +1,6 @@
 public class Guest {
 
+    // PROPERTIES
     private String name;
     private int age;
     private double wallet;
@@ -8,6 +9,7 @@ public class Guest {
     private char currency;
     private String favouriteDrink;
 
+    // CONSTRUCTOR
     public Guest(String name, int age, double wallet, int sobriety, boolean notBanned, char currency, String favouriteDrink){
         this.name = name;
         this.age = age;
@@ -18,6 +20,15 @@ public class Guest {
         this.favouriteDrink = favouriteDrink;
     }
 
+    // METHODS
+    public boolean guestCanBuy(){
+        if (this.wallet >= 5){
+            return true;
+        }
+        return false;
+    }
+
+    // GETTERS & SETTERS
     public String getName(){
         return this.name;
     }

@@ -20,6 +20,17 @@ public class GuestTest {
     }
 
     @Test
+    public void guestPreventedFromBuyingIfNotEnoughMoney(){
+        guest.setWallet(4.99);
+        assertThat(guest.guestCanBuy()).isEqualTo(false);
+    }
+
+    @Test
+    public void guestCanBuyIfHasMoney(){
+        assertThat(guest.guestCanBuy()).isEqualTo(true);
+    }
+
+    @Test
     public void hasName(){
         assertThat(guest.getName()).isEqualTo("John");
     }
