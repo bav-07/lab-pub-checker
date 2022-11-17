@@ -15,7 +15,8 @@ public class GuestTest {
                 50,
                 100,
                 true,
-                '£');
+                '£',
+                "Fanta");
     }
 
     @Test
