@@ -84,4 +84,15 @@ public class GuestTest {
         guest.setCurrency('$');
         assertThat(guest.getCurrency()).isEqualTo('$');
     }
+
+    @Test
+    public void hasFavouriteDrink(){
+        assertThat(guest.getFavouriteDrink()).isEqualTo("Fanta");
+    }
+
+    @Test
+    public void canSetFavouriteDrink(){
+        guest.setFavouriteDrink("Pepsi");
+        assertThat(guest.getFavouriteDrink()).isEqualTo("Pepsi");
+    }
 }

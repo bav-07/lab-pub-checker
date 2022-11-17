@@ -6,7 +6,7 @@ public class Guest {
     private int sobriety;
     private boolean notBanned;
     private char currency;
-    private String favouriteDrink
+    private String favouriteDrink;
 
     public Guest(String name, int age, double wallet, int sobriety, boolean notBanned, char currency, String favouriteDrink){
         this.name = name;
