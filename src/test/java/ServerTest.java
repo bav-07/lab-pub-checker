@@ -81,9 +81,9 @@ public class ServerTest {
         guest.setFavouriteDrink("Red Bull");
         assertThat(server.canServeGuest(guest)).isEqualTo(false);
     }
-    
+
     @Test
-    public void guestWalletDecrementedIfDrinkBoughtAndNotDecrementedIfNotBought(){
+    public void guestWalletOnlyDecrementedIfDrinkBought(){
         server.guestBuyDrink(guest);
         assertThat(guest.getWallet()).isEqualTo(3);
         server.guestBuyDrink(guest);
