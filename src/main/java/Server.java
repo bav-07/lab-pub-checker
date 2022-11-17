@@ -22,6 +22,9 @@ public class Server {
         if (guest.getPermissionToEnter() == false){
             return false;
         }
+        if (guest.getCurrency() != '£'){
+            return false;
+        }
         return true;
     }
 
