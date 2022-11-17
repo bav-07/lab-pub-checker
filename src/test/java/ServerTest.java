@@ -43,6 +43,7 @@ public class ServerTest {
 
     @Test
     public void doesNotServeIfGuestDoesNotHaveEnoughMoney(){
+        guest.setWallet(4.99);
         boolean result = server.canServeGuest(guest);
         assertThat(result).isEqualTo(false);
     }
