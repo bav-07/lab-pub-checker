@@ -5,8 +5,8 @@ public class Server {
 
     private ArrayList<String> drinkNames;
 
-    public Server(){
-
+    public Server(ArrayList<String> drinkNames){
+        this.drinkNames = drinkNames;
     }
 
     public boolean canServeGuest(Guest guest){

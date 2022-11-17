@@ -10,10 +10,17 @@ public class ServerTest {
 
     Server server;
     Guest guest;
+    ArrayList<String> drinkNames = new ArrayList<>();
 
     @BeforeEach
     public void setUp(){
-        server = new Server();
+        drinkNames.add("Pepsi");
+        drinkNames.add("Fanta");
+        drinkNames.add("Coke");
+        drinkNames.add("Sprite");
+        drinkNames.add("Dr.Pepper");
+
+        server = new Server(drinkNames);
         guest = new Guest(
                 "John",
                 24,
