@@ -28,6 +28,7 @@ public class ServerTest {
 
     @Test
     public void doesNotServeToUnder18s(){
+        guest.setAge(12);
         boolean result = server.canServeGuest(guest);
         assertThat(result).isEqualTo(false);
     }
