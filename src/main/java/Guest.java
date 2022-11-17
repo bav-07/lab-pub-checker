@@ -42,5 +42,12 @@ public class Guest {
         this.sobriety = sobriety;
     }
 
+    public boolean getPermissionToEnter(){
+        return this.notBanned;
+    }
+    public void setPermissionToEnter(boolean notBanned){
+        this.notBanned = notBanned;
+    }
+
 
 }

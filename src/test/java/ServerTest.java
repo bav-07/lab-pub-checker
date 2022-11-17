@@ -73,7 +73,7 @@ public class ServerTest {
 
     @Test
     public void doesNotGetServedIfBanned(){
-        guest.setNotBanned(false);
+        guest.setPermissionToEnter(false);
         boolean result = server.canServeGuest(guest);
         assertThat(result).isEqualTo(false);
     }
