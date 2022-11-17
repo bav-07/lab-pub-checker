@@ -19,4 +19,9 @@ public class GuestTest {
         assertThat(guest.getName()).isEqualTo("John");
     }
 
+    @Test
+    public void canSetName(){
+        guest.setName("Dave");
+        assertThat(guest.getName()).isEqualTo("Dave");
+    }
 }
