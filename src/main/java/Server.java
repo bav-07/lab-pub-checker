@@ -25,6 +25,12 @@ public class Server {
         return false;
     }
 
+    public void guestBuyDrink(Guest guest){
+        if (this.canServeGuest(guest)) {
+            guest.setWallet(guest.getWallet() - 5);
+        }
+    }
+
     public ArrayList<String> getDrinkNames(){
         return this.drinkNames;
     }

@@ -24,7 +24,7 @@ public class ServerTest {
         guest = new Guest(
                 "John",
                 24,
-                50,
+                8,
                 100,
                 true,
                 '£',
@@ -116,6 +116,14 @@ public class ServerTest {
         guest.setFavouriteDrink("Red Bull");
         boolean result = server.canServeGuest(guest);
         assertThat(result).isEqualTo(false);
+    }
+
+    @Test
+    public void guestWalletDecrementedIfDrinkBoughtAndNotDecrementedIfNotBought(){
+        server.guestBuyDrink(guest);
+        assertThat(guest.getWallet()).isEqualTo(3);
+        server.guestBuyDrink(guest);
+        assertThat(guest.getWallet()).isEqualTo(3);
     }
 
     // GETTER & SETTER TESTS
