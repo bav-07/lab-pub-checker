@@ -4,7 +4,7 @@ public class Guest {
     private int age;
     private double wallet;
 
-    public Guest(String name, int age, private double wallet){
+    public Guest(String name, int age, double wallet){
         this.name = name;
         this.age = age;
         this.wallet = wallet;

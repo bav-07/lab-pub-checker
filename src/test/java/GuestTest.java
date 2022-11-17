@@ -11,7 +11,8 @@ public class GuestTest {
     public void setUp(){
         guest = new Guest(
                 "John",
-                24);
+                24,
+                50);
     }
 
     @Test
@@ -34,5 +35,16 @@ public class GuestTest {
     public void canSetAge(){
         guest.setAge(35);
         assertThat(guest.getAge()).isEqualTo(35);
+    }
+
+    @Test
+    public void hasWallet(){
+        assertThat(guest.getWallet()).isEqualTo(50);
+    }
+
+    @Test
+    public void canSetWallet(){
+        guest.setWallet(20);
+        assertThat(guest.getWallet()).isEqualTo(20);
     }
 }

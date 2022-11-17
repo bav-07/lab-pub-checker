@@ -16,7 +16,8 @@ public class ServerTest {
         server = new Server();
         guest = new Guest(
                 "John",
-                24);
+                24,
+                50);
     }
 
     // TODO: test that guest can only get served if over 18
