@@ -19,7 +19,8 @@ public class ServerTest {
                 24,
                 50,
                 100,
-                true);
+                true,
+                '£');
     }
 
     // TODO: test that guest can only get served if over 18

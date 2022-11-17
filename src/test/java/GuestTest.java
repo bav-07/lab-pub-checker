@@ -14,7 +14,8 @@ public class GuestTest {
                 24,
                 50,
                 100,
-                true);
+                true,
+                '£');
     }
 
     @Test
