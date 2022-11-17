@@ -48,4 +48,15 @@ public class GuestTest {
         guest.setWallet(20);
         assertThat(guest.getWallet()).isEqualTo(20);
     }
+
+    @Test
+    public void isSober(){
+        assertThat(guest.getSobriety()).isEqualTo(100);
+    }
+
+    @Test
+    public void isDrunk(){
+        guest.setSobriety(49);
+        assertThat(guest.getSobriety()).isEqualTo(49);
+    }
 }

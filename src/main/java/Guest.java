@@ -9,7 +9,7 @@ public class Guest {
         this.name = name;
         this.age = age;
         this.wallet = wallet;
-        this.sobriety = sobriety
+        this.sobriety = sobriety;
     }
 
     public String getName(){
@@ -32,5 +32,7 @@ public class Guest {
     public void setWallet(double wallet){
         this.wallet = wallet;
     }
+
+
 
 }
