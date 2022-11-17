@@ -78,8 +78,19 @@ public class ServerTest {
         assertThat(result).isEqualTo(false);
     }
 
-
     // TODO: test that guest can only get served if guest can pay in local currency (add £ char as currency)
+    @Test
+    public void canServeIfCurrencyLocal(){
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(true);
+    }
+
+    @Test
+    public void doesNotGetServedIfCurrencyForeign(){
+        guest.setCurrency('$');
+        boolean result = server.canServeGuest(guest);
+        assertThat(result).isEqualTo(false);
+    }
 
     // EXTENSIONS
 
