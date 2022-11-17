@@ -72,4 +72,15 @@ public class GuestTest {
         guest.setPermissionToEnter(false);
         assertThat(guest.getPermissionToEnter()).isEqualTo(false);
     }
+
+    @Test
+    public void hasCurrency(){
+        assertThat(guest.getCurrency()).isEqualTo('£');
+    }
+
+    @Test
+    public void canSetCurrency(){
+        guest.setCurrency('$');
+        assertThat(guest.getCurrency()).isEqualTo('$');
+    }
 }
